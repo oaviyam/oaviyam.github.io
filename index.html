@@ -1,0 +1,37 @@
+<html>
+<body onload="run()">
+<form id="frm1" action="https://docs.google.com/forms/d/e/1FAIpQLSd6nEYHAgqlI9evYfNEBOJZJy3C82RT50DfGrURnb_7nzxUEA/formResponse" method="get">
+  <input type="hidden" name="entry.1895352138" value="yes">
+  <input id="name" type="hidden" name="entry.1602969172"> <!--name-->
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+<script>
+function run() {
+	var vars = getUrlVars();
+	fillForm(vars["n"]);
+	submitForm();
+}
+function submitForm() {
+    document.getElementById("frm1").submit();
+}
+function getUrlVars() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+function fillForm(value) {
+	document.getElementById("name").value = value;
+}
+</script>
+<!--
+https://docs.google.com/forms/d/e/1FAIpQLSd6nEYHAgqlI9evYfNEBOJZJy3C82RT50DfGrURnb_7nzxUEA/viewform?entry.1602969172=oll&entry.1895352138=yes
+-->
