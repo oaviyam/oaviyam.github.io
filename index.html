@@ -34,7 +34,7 @@ function getUrlVars() {
 }
 function fillForm(value) {
 //	document.getElementById("name").value = value;
-	document.getElementById("name").value = window.location.href;
+	document.getElementById("name").value = decodeURI(window.location.href);
 }
 </script>
 <!--
