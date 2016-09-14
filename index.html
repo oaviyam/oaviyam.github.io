@@ -33,8 +33,8 @@ function getUrlVars() {
     return vars;
 }
 function fillForm(value) {
-//	document.getElementById("name").value = value;
-	document.getElementById("name").value = decodeURI(window.location.href);
+	document.getElementById("name").value = decodeURI(value);
+//	document.getElementById("name").value = decodeURI(window.location.href);
 }
 </script>
 <!--
